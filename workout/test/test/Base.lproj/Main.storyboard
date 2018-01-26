@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lx0-gP-AD5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="運動計時器" id="ocC-RM-y2J"/>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7XV-rH-7OW">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBf-iA-9Ls">
+                                <rect key="frame" x="0.0" y="146" width="375" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3f-AE-q40">
+                                <rect key="frame" x="67" y="306.5" width="240" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G44-hv-VFo">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="開始"/>
+                                        <connections>
+                                            <action selector="startTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="upx-Kx-eV0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCp-be-hAK">
+                                        <rect key="frame" x="120" y="0.0" width="120" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="bgk-0Z-af6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="重置"/>
+                                        <connections>
+                                            <action selector="resetTimerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jCR-h7-rYf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9TS-09-N7D"/>
+                                    <constraint firstAttribute="height" constant="54" id="EY4-3x-Cjw"/>
+                                    <constraint firstItem="jCp-be-hAK" firstAttribute="top" secondItem="e3f-AE-q40" secondAttribute="top" id="h1i-Hm-AYf"/>
+                                    <constraint firstAttribute="trailing" secondItem="jCp-be-hAK" secondAttribute="trailing" id="jzG-gi-bKH"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lx0-gP-AD5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GX0-Xc-Njf"/>
+                            <constraint firstItem="7XV-rH-7OW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LDM-K0-Cte"/>
+                            <constraint firstItem="7XV-rH-7OW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Shl-r6-teR"/>
+                            <constraint firstItem="yBf-iA-9Ls" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Swc-hp-gg4"/>
+                            <constraint firstItem="e3f-AE-q40" firstAttribute="top" secondItem="yBf-iA-9Ls" secondAttribute="bottom" constant="88.5" id="TP0-bq-vN2"/>
+                            <constraint firstItem="yBf-iA-9Ls" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Voz-Ou-FLq"/>
+                            <constraint firstItem="yBf-iA-9Ls" firstAttribute="top" secondItem="Lx0-gP-AD5" secondAttribute="bottom" constant="102" id="Wja-px-FUu"/>
+                            <constraint firstItem="Lx0-gP-AD5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bF2-hw-qmC"/>
+                            <constraint firstItem="e3f-AE-q40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hSa-9c-gk4"/>
+                            <constraint firstItem="7XV-rH-7OW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hcQ-LX-lBe"/>
+                            <constraint firstItem="yBf-iA-9Ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jF5-t9-6xz"/>
+                            <constraint firstItem="Lx0-gP-AD5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x5f-ut-sBZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="7XV-rH-7OW" id="ZwM-Ie-vm7"/>
+                        <outlet property="startTimerLabel" destination="G44-hv-VFo" id="fvH-aS-4Av"/>
+                        <outlet property="timerLabel" destination="yBf-iA-9Ls" id="SUm-HH-5Kk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
